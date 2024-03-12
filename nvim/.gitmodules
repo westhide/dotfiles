@@ -1,0 +1,3 @@
+[submodule "contrib/lazy.nvim"]
+	path = contrib/lazy.nvim
+	url = https://github.com/westhide/lazy.nvim.git
