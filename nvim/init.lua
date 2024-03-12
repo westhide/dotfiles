@@ -10,4 +10,4 @@ require "core.neovide"
 
 -- require "core.lazy"
 
--- vim.cmd [[colorscheme onedark]]
+vim.cmd [[colorscheme habamax]]
