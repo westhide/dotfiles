@@ -16,7 +16,7 @@ for key, val in pairs
     number = true,
     pumblend = 10,
     pumheight = 10,
-    relativenumber = true,
+    -- relativenumber = true,
     scrolloff = 4,
     shiftround = true,
     shiftwidth = 2,

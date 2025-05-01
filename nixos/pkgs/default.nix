@@ -1,0 +1,9 @@
+{ ... }:
+
+{
+  imports = [
+    ./btop
+    ./git
+    ./nvim
+  ];
+}

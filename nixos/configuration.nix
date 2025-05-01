@@ -1,10 +1,10 @@
 # See also configuration.nix(5) man page, https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, username, hostname, ... }:
+{ config, lib, pkgs, opts, ... }:
 
 {
-  imports = [ 
-      ./hardware-configuration.nix
+  imports = [
+    ./hardware-configuration.nix
   ];
 
   # Flakes
@@ -20,10 +20,10 @@
 
   # Networking
   networking = {
-    hostName = hostname;
+    hostName = opts.hostname;
     networkmanager.enable = true;
     proxy = {
-      # default = "http://user:pass@host:port/";
+      default = "http://user:pass@host:port/";
       noProxy = "127.0.0.1,localhost";
     };
   };
@@ -39,18 +39,12 @@
   #   useXkbConfig = true;
   # };
 
-  # Sound
-  hardware.pulseaudio.enable = true;
-  # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
+  
 
   # Touchpad
 
   # User account
-  users.users.${username} = {
+  users.users.${opts.username} = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.bash;
@@ -77,14 +71,23 @@
   # Services
   services = {
     libinput.enable = true;
-    xserver.xkb.layout = "us";
-
+    xserver = {
+      enable = true;
+      xkb.layout = "us";
+      # xkb.options = "eurosign:e,caps:escape";
+    };
+    pipewire = {
+      enable = true;
+      pulse.enable = true;
+    };
     openssh.enable = true;
-
-    # X11
-    # xserver.enable = true;
-    # xserver.xkb.options = "eurosign:e,caps:escape";
   };
+
+  # Graphics
+  hardware.graphics = {
+    enable = true;
+  };
+  #hardware.pulseaudio.enable = true;
 
   # Firewall
   # networking.firewall.allowedTCPPorts = [ ... ];
