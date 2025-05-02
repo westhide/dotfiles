@@ -12,6 +12,7 @@
     homeDirectory = "/home/westhide";
 
     sessionVariables = {
+      NIXOS_OZONE_WL = "1";
     };
 
     packages = with pkgs;[

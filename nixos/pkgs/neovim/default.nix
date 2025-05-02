@@ -1,7 +1,7 @@
 { config, h, ... }:
 
 {
-  xdg.configFile.nvim.source = h.mkXdgConfigLink config "nvim";
+  xdg.configFile.nvim.source = h.mkXdgConfigLink config "neovim/config";
 
   programs.neovim = {
     enable = true;

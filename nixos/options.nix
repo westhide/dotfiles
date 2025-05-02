@@ -6,4 +6,5 @@
   usermail = "westhide.dev@gmail.com";
   hostname = "westhide-nixos";
   hardware = "lenovo-thinkpad-x13";
+  proxyurl = null;
 }

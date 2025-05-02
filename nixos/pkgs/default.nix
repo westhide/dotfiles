@@ -4,6 +4,7 @@
   imports = [
     ./btop
     ./git
-    ./nvim
+    ./neovim
+    ./hyprland
   ];
 }

@@ -27,14 +27,14 @@
     home-manager,
     ...
   } : let
-    h = import ./helper.nix {};
     opts = import ./options.nix {};
+    h = import ./common/helper.nix {};
   in {
     nixosConfigurations.${opts.hostname} = nixpkgs.lib.nixosSystem {
       system = opts.system;
       modules = [
-        ./configuration.nix
-	nixos-hardware.nixosModules.${opts.hardware}
+        ./modules
+	    nixos-hardware.nixosModules.${opts.hardware}
 
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
