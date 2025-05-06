@@ -19,14 +19,19 @@
       NIXOS_OZONE_WL = "1";
     };
 
-    packages = with pkgs; [
-    ];
+    pointerCursor = {
+      gtk.enable = true;
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
+      size = 16;
+    };
   };
 
   gtk = {
     enable = true;
-    cursorTheme = {
+    iconTheme = {
       name = "Adwaita";
+      package = pkgs.adwaita-icon-theme;
     };
   };
 

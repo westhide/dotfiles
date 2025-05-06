@@ -4,7 +4,7 @@
   imports = [
     ./configuration.nix
     ./hardware-configuration.nix
-    ./audio.nix
+    ./media.nix
     ./network.nix
     ./bluetooth.nix
     ./hyprland.nix
