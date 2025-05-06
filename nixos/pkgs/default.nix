@@ -6,6 +6,7 @@
     ./btop
     ./git
     ./neovim
+    ./font
     ./hyprland
     ./mako
     ./wofi
@@ -15,6 +16,7 @@
     ./rust
     ./google-chrome
     ./vscode
+    ./android-studio
     ./feishu
   ];
 }

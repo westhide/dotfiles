@@ -44,6 +44,8 @@
         "wheel"
         "networkmanager"
         "docker"
+        "kvm"
+        "adbusers"
       ];
       shell = pkgs.bash;
     };

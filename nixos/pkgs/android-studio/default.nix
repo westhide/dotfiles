@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    feishu
+    android-studio
+    android-tools
   ];
 }
