@@ -1,4 +1,8 @@
-{ config, pkgs, ... }:
+{
+  pkgs,
+  opts,
+  ...
+}:
 
 {
   imports = [
@@ -8,14 +12,14 @@
   home.stateVersion = "24.11";
 
   home = {
-    username = "westhide";
-    homeDirectory = "/home/westhide";
+    username = opts.username;
+    homeDirectory = "/home/${opts.username}";
 
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
     };
 
-    packages = with pkgs;[
+    packages = with pkgs; [
     ];
   };
 
@@ -30,6 +34,9 @@
     bash = {
       enable = true;
       enableCompletion = true;
+      shellAliases = {
+        ll = "ls -Alh --color=auto";
+      };
     };
     home-manager.enable = true;
   };

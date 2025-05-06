@@ -1,6 +1,12 @@
 # See also configuration.nix(5) man page, https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, opts, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  opts,
+  ...
+}:
 
 {
   imports = [
@@ -10,7 +16,10 @@
   nixpkgs.config.allowUnfree = true;
 
   # Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Boot
   boot.loader = {
@@ -31,7 +40,11 @@
   users.users = {
     ${opts.username} = {
       isNormalUser = true;
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [
+        "wheel"
+        "networkmanager"
+        "docker"
+      ];
       shell = pkgs.bash;
     };
   };

@@ -11,6 +11,6 @@
       variables = [ "--all" ];
       enableXdgAutostart = true;
     };
-    settings = {};
+    settings = { };
   };
 }

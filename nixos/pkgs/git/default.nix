@@ -1,4 +1,4 @@
-{ config, opts, ... }:
+{ opts, ... }:
 
 {
   programs.git = {
@@ -25,9 +25,9 @@
     };
 
     includes = [
-      { 
-        path = "~/CodeHub/.gitconfig";
-        condition = "gitdir:~/CodeHub/";
+      {
+        path = "${opts.wkgitdir}/.gitconfig";
+        condition = "gitdir:${opts.wkgitdir}/**";
       }
     ];
   };

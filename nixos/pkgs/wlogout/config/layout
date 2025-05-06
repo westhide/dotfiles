@@ -2,7 +2,7 @@
     "text"    : "Suspend",
     "label"   : "suspend",
     "action"  : "systemctl suspend",
-    "keybind" : "s"
+    "keybind" : "t"
 }
 {
     "text"    : "Logout",
@@ -14,7 +14,7 @@
     "text"    : "Shutdown",
     "label"   : "shutdown",
     "action"  : "systemctl poweroff",
-    "keybind" : "q"
+    "keybind" : "s"
 }
 {
     "text"    : "Reboot",

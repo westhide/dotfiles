@@ -7,10 +7,12 @@
     ./git
     ./neovim
     ./hyprland
-    ./google-chrome
-    ./vscode
     ./wofi
     ./wlogout
+    ./built-in
+    ./rust
+    ./google-chrome
+    ./vscode
     ./feishu
   ];
 }

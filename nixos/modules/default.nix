@@ -8,5 +8,6 @@
     ./network.nix
     ./bluetooth.nix
     ./hyprland.nix
+    ./virtualisation.nix
   ];
 }

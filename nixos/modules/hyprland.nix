@@ -16,8 +16,4 @@
     };
     defaultSession = "hyprland";
   };
-
-  services.gnome.gnome-keyring = {
-    enable = true;
-  };
 }
