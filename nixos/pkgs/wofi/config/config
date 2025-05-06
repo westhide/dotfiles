@@ -1,0 +1,11 @@
+width         = 600
+height        = 500
+show          = drun
+prompt        = ...
+allow_markup  = true
+no_actions    = true
+insensitive   = true
+allow_images  = true
+image_size    = 30
+gtk_dark      = true
+dynamic_lines = true

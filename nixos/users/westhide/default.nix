@@ -16,8 +16,14 @@
     };
 
     packages = with pkgs;[
-      feishu
     ];
+  };
+
+  gtk = {
+    enable = true;
+    cursorTheme = {
+      name = "Adwaita";
+    };
   };
 
   programs = {
@@ -25,13 +31,6 @@
       enable = true;
       enableCompletion = true;
     };
-    alacritty = {
-      enable = true;
-      settings = {
-        env.TERM = "xterm-256color";
-      };
-    };
-
     home-manager.enable = true;
   };
 }

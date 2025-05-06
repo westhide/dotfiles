@@ -42,11 +42,11 @@
 
   # Programs
   programs = {
-    mtr.enable = true;
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
     };
+    mtr.enable = true;
     neovim = {
       enable = true;
       viAlias = true;

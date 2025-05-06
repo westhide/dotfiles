@@ -3,17 +3,21 @@
 {
   programs.hyprland = {
     enable = true;
-    withUWSM = true;
+    # withUWSM = true;
   };
 
-  services = {
-    xserver = {
+  services.displayManager = {
+    sddm = {
       enable = true;
-      xkb.layout = "us";
-      # xkb.options = "eurosign:e,caps:escape";
-      displayManager = {
-        sddm.enable = true;
+      autoNumlock = true;
+      wayland = {
+        enable = true;
       };
     };
+    defaultSession = "hyprland";
+  };
+
+  services.gnome.gnome-keyring = {
+    enable = true;
   };
 }
