@@ -1,0 +1,5 @@
+#!/bin/sh
+
+hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .specialWorkspace.name' | sed 's/special://' | xargs -I [] hyprctl dispatch togglespecialworkspace []
+
+hyprctl dispatch workspace "$1"

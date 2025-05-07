@@ -6,6 +6,7 @@
     gcc
     gnumake
     file
+    jq
     nixfmt-rfc-style
     nixd
   ];
