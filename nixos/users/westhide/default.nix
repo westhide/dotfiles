@@ -15,10 +15,6 @@
     username = opts.username;
     homeDirectory = "/home/${opts.username}";
 
-    sessionVariables = {
-      NIXOS_OZONE_WL = "1";
-    };
-
     pointerCursor = {
       gtk.enable = true;
       name = "Bibata-Modern-Classic";

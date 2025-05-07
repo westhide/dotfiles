@@ -1,8 +1,14 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    android-studio
-    android-tools
-  ];
+  home = {
+    sessionVariables = {
+      ANDROID_HOME = "$HOME/Android/Sdk";
+    };
+
+    packages = with pkgs; [
+      android-studio
+      android-tools
+    ];
+  };
 }
