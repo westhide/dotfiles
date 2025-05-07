@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    file
-    jq
+    nixfmt-rfc-style
+    nixd
   ];
 }

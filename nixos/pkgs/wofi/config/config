@@ -1,6 +1,7 @@
 width         = 600
 height        = 500
 show          = drun
+term          = alacritty
 prompt        = ...
 allow_markup  = true
 no_actions    = true

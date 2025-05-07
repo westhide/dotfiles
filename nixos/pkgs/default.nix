@@ -14,8 +14,11 @@
     ./fcitx5
     ./built-in
     ./rust
+    ./cxx
     ./java
+    ./go
     ./nodejs
+    ./nix
     ./devenv
     ./google-chrome
     ./vscode

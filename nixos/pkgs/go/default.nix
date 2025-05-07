@@ -2,7 +2,8 @@
 
 {
   home.packages = with pkgs; [
-    file
-    jq
+    go
+    gotools
+    gopls
   ];
 }

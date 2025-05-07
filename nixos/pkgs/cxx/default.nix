@@ -2,7 +2,10 @@
 
 {
   home.packages = with pkgs; [
-    file
-    jq
+    #clang
+    cmake
+    gnumake
+    gcc
+    gdb
   ];
 }
