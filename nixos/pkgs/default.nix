@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./base
     ./alacritty
     ./btop
     ./git
@@ -12,7 +13,6 @@
     ./wofi
     ./wlogout
     ./fcitx5
-    ./built-in
     ./rust
     ./cxx
     ./java
