@@ -43,6 +43,7 @@
       extraGroups = [
         "wheel"
         "networkmanager"
+        "pipewire"
         "docker"
         "kvm"
         "adbusers"
