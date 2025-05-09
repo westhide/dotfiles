@@ -1,5 +1,6 @@
 {
   config,
+  pkgs,
   h,
   ...
 }:
@@ -10,6 +11,7 @@
 
   home.sessionVariables = {
     NIXOS_OZONE_WL = "1";
+    HYPRSHOT_DIR = "$HOME/Store/HyprShot";
   };
 
   wayland.windowManager.hyprland = {
@@ -21,4 +23,8 @@
     };
     settings = { };
   };
+
+  home.packages = with pkgs; [
+    hyprshot
+  ];
 }
