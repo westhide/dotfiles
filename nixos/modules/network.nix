@@ -14,6 +14,10 @@
     # };
   };
 
+  programs = {
+    mtr.enable = true;
+  };
+
   services.v2raya = {
     enable = true;
   };

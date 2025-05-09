@@ -1,28 +1,14 @@
-{ ... }:
+{ lib, ... }:
 
+let
+  dir = ./.;
+in
 {
-  imports = [
-    ./base
-    ./alacritty
-    ./btop
-    ./git
-    ./neovim
-    ./font
-    ./hyprland
-    ./mako
-    ./wofi
-    ./wlogout
-    ./fcitx5
-    ./rust
-    ./cxx
-    ./java
-    ./go
-    ./nodejs
-    ./nix
-    ./devenv
-    ./google-chrome
-    ./vscode
-    ./android-studio
-    ./feishu
-  ];
+  imports = lib.flatten (
+    lib.pipe dir [
+      builtins.readDir
+      (lib.filterAttrs (name: _: name != "default.nix"))
+      (lib.mapAttrsToList (name: type: "${dir}/${name}"))
+    ]
+  );
 }

@@ -54,6 +54,7 @@
 
   # Packages
   environment.systemPackages = with pkgs; [
+    openssl
   ];
 
   # Programs
@@ -62,7 +63,6 @@
       enable = true;
       enableSSHSupport = true;
     };
-    mtr.enable = true;
     neovim = {
       enable = true;
       viAlias = true;
