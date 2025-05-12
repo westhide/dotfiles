@@ -9,9 +9,14 @@
   xdg.configFile."hypr/hyprland.conf".enable = false;
   xdg.configFile.hypr.source = h.mkXdgConfigLink config "hyprland/config";
 
-  home.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    HYPRSHOT_DIR = "$HOME/Store/HyprShot";
+  home = {
+    sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+      HYPRSHOT_DIR = "$HOME/Store/HyprShot";
+    };
+    packages = with pkgs; [
+      hyprshot
+    ];
   };
 
   wayland.windowManager.hyprland = {
@@ -23,8 +28,4 @@
     };
     settings = { };
   };
-
-  home.packages = with pkgs; [
-    hyprshot
-  ];
 }

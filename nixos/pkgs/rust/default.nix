@@ -8,6 +8,7 @@
 
     packages = with pkgs; [
       rustup
+      jetbrains.rust-rover
     ];
   };
 }

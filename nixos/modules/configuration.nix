@@ -59,14 +59,14 @@
 
   # Programs
   programs = {
-    gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-    };
     neovim = {
       enable = true;
       viAlias = true;
       defaultEditor = true;
+    };
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
     };
   };
 

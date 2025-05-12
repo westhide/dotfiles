@@ -1,6 +1,7 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
+  # ln -s ~/dotfiles/fonts ~/.local/share/fonts
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
