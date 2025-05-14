@@ -2,7 +2,7 @@ bind = $Super, M, exec, $Menu
 bind = $Super, T, exec, $Terminal
 bind = $Super, E, exec, $FileManager
 
-bind = Ctrl_Shift, L, exec, $Lockout
+bind = Ctrl_Alt, L, exec, $Lockout
 
 bind = $Super, W, killactive,
 bind = $Super, H, movefocus, l
