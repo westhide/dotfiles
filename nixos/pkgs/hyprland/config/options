@@ -3,7 +3,7 @@ env = XCURSOR_SIZE,14
 env = HYPRCURSOR_SIZE,14
 
 $HyprDir     = ~/.config/hypr
-$Super       = ALTK
+$Super       = ALT
 $Terminal    = alacritty
 $FileManager = $Terminal -e yazi
 $Menu        = wofi --term $Terminal --show drun
