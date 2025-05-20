@@ -2,12 +2,13 @@
 
 {
   home.packages = with pkgs; [
-    file
-    tree
-    lsof
     jq
     zip
+    file
     wget
+    tree
+    lsof
+    nmap
     inetutils
     fastfetch
   ];
