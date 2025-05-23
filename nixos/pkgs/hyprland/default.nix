@@ -12,7 +12,7 @@
   home = {
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
-      HYPRSHOT_DIR = "$HOME/Store/HyprShot";
+      HYPRSHOT_DIR = "$HOME/.cache/hyprshot";
     };
     packages = with pkgs; [
       hyprshot
