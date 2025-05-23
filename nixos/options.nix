@@ -5,7 +5,7 @@
   username = "westhide";
   usermail = "westhide.dev@gmail.com";
   hostname = "westhide-nixos";
-  hardware = "lenovo-legion-16irx8h";
+  hardware = "lenovo-legion-15ich1650ti";
   proxyurl = null;
   wkgitdir = "~/Store/CodeHub";
 }
