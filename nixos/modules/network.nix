@@ -18,7 +18,20 @@
     mtr.enable = true;
   };
 
-  services.v2raya = {
-    enable = true;
+  services = {
+    v2raya.enable = true;
+    geoipupdate = {
+      enable = true;
+      interval = "monthly";
+      settings = {
+        AccountID = opts.geoipupdate.AccountID;
+        LicenseKey = opts.geoipupdate.LicenseKey;
+        EditionIDs = [
+          "GeoLite2-ASN"
+          "GeoLite2-City"
+          "GeoLite2-Country"
+        ];
+      };
+    };
   };
 }
