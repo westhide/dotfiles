@@ -1,4 +1,4 @@
-env = GDK_SCALE,1
+env = GDK_SCALE,1.5
 env = XCURSOR_SIZE,14
 env = HYPRCURSOR_SIZE,14
 

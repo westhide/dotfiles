@@ -12,6 +12,8 @@
 
   home.packages = with pkgs; [
     nodejs
+    bun
+    turbo
     # pnpm
     # yarn
   ];
