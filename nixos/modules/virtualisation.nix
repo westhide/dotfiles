@@ -2,6 +2,11 @@
 
 {
   virtualisation = {
-    docker.enable = true;
+    docker = {
+      enable = true;
+      daemon.settings = {
+        data-root = "/ext/docker";
+      };
+    };
   };
 }

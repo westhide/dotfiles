@@ -1,8 +1,18 @@
 { pkgs, ... }:
 
 {
-  xdg.terminal-exec = {
-    enable = true;
+  xdg = {
+    terminal-exec = {
+      enable = true;
+    };
+    portal = {
+      enable = true;
+      wlr.enable = true;
+      xdgOpenUsePortal = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-hyprland
+      ];
+    };
   };
 
   programs.hyprland = {

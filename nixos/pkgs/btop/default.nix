@@ -1,9 +1,9 @@
-{ config, h, ... }:
+{ config, pkgs, h, ... }:
 
 {
   xdg.configFile."btop/btop.conf".source = h.mkXdgConfigLink config "btop/config/btop.conf";
 
-  programs.btop = {
-    enable = true;
-  };
+  home.packages = with pkgs; [
+    btop-cuda
+  ];
 }

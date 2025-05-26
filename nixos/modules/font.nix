@@ -7,6 +7,7 @@
       noto-fonts-emoji
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
+      nerd-fonts.symbols-only
     ];
 
     fontDir.enable = true;
@@ -21,16 +22,19 @@
           "Noto Serif"
           "Noto Serif CJK SC"
           "Noto Color Emoji"
+          "Symbols Nerd Font"
         ];
         sansSerif = [
           "Noto Sans"
           "Noto Sans CJK SC"
           "Noto Color Emoji"
+          "Symbols Nerd Font"
         ];
         monospace = [
           "Noto Mono"
           "Noto Sans Mono CJK SC"
           "Noto Color Emoji"
+          "Symbols Nerd Font Mono"
         ];
       };
     };

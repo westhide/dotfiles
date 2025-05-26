@@ -1,6 +1,10 @@
-env = GDK_SCALE,1.5
+env = GDK_SCALE,1
 env = XCURSOR_SIZE,14
 env = HYPRCURSOR_SIZE,14
+
+env = XDG_SESSION_TYPE,wayland
+env = XDG_SESSION_DESKTOP,Hyprland
+env = XDG_CURRENT_DESKTOP,Hyprland
 
 $HyprDir     = ~/.config/hypr
 $Super       = ALT
