@@ -47,6 +47,7 @@
         "docker"
         "kvm"
         "adbusers"
+        "wireshark"
       ];
       shell = pkgs.bash;
     };

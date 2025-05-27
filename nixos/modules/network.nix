@@ -8,14 +8,17 @@
       default = opts.proxyurl;
       noProxy = "127.0.0.1,localhost";
     };
-    # firewall = {
-    #   allowedTCPPorts = [ ... ];
-    #   allowedUDPPorts = [ ... ];
-    # };
   };
 
   programs = {
     mtr.enable = true;
+    wireshark = {
+      enable = true;
+      dumpcap.enable = true;
+      usbmon.enable = true;
+    };
+    trippy.enable = true;
+    sniffnet.enable = true;
   };
 
   services = {
