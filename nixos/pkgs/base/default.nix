@@ -9,6 +9,7 @@
     tree
     lsof
     nmap
+    unzip
     inetutils
     fastfetch
   ];
