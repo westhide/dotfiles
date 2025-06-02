@@ -5,7 +5,7 @@
   username = "westhide";
   usermail = "westhide.dev@gmail.com";
   hostname = "westhide-nixos";
-  hardware = "lenovo-legion-15ich1650ti";
+  hardware = "lenovo-thinkpad-x13";
   proxyurl = null;
   wkgitdir = "~/store/CodeHub";
   geoipupdate = {

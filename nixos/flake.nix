@@ -15,7 +15,7 @@
     };
 
     nixos-hardware = {
-      url = "github:westhide/nixos-hardware/master";
+      url = "github:NixOS/nixos-hardware/master";
     };
 
     home-manager = {
