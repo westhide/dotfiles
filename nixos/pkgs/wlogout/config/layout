@@ -1,4 +1,10 @@
 {
+    "text"    : "Lock",
+    "label"   : "lock",
+    "action"  : "hyprlock --quiet",
+    "keybind" : "l"
+}
+{
     "text"    : "Suspend",
     "label"   : "suspend",
     "action"  : "systemctl suspend",

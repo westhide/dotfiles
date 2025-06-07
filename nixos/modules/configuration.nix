@@ -60,6 +60,7 @@
 
   # Programs
   programs = {
+    nix-ld.enable = true;
     neovim = {
       enable = true;
       viAlias = true;
