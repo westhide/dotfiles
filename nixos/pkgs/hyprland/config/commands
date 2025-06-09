@@ -1,1 +1,2 @@
 exec-once = fcitx5 -d
+exec-once = systemctl --user start hypridle
