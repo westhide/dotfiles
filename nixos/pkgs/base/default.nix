@@ -12,5 +12,6 @@
     unzip
     inetutils
     fastfetch
+    smartmontools
   ];
 }
