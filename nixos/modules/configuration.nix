@@ -44,7 +44,7 @@
         "wheel"
         "networkmanager"
         "pipewire"
-        "docker"
+        "podman"
         "kvm"
         "adbusers"
         "wireshark"
