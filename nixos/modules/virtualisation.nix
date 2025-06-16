@@ -2,7 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    podman-compose
+    # podman-compose
+    docker-compose
   ];
 
   virtualisation = {
@@ -14,6 +15,11 @@
     # };
     containers = {
       enable = true;
+      containersConf = {
+        settings = {
+          engine.compose_warning_logs = false;
+        };
+      };
       storage.settings = {
         storage.graphroot = "/ext/podman";
       };
