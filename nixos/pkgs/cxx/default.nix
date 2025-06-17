@@ -1,16 +1,21 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    #clang
-    pkg-config
-    autoconf
-    automake
-    cmake
-    gnumake
-    gcc
-    gdb
-    swig
-    bison
-  ];
+  home = {
+    sessionVariables = {
+      CC = "gcc";
+      CXX = "g++";
+    };
+    packages = with pkgs; [
+      gcc
+      gdb
+      swig
+      bison
+      #clang
+      cmake
+      gnumake
+      autoconf
+      automake
+    ];
+  };
 }
