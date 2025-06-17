@@ -18,6 +18,11 @@ save_to_clipboard = true
 
 [keyboard]
 bindings = [
-  { mods = "Control|Shift", key = "L", action = "ToggleViMode" },
-  { mode = "Vi", key = "Escape", action = "ToggleViMode" }
+    { mode = "Vi",            key = "Escape", action = "ToggleViMode" },
+    { mods = "Control|Shift", key = "L",      action = "ToggleViMode" }
+]
+
+[mouse]
+bindings = [
+    { mouse = "Right", action = "Paste" }
 ]
