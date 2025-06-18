@@ -31,6 +31,7 @@ bind = $Super, 6, exec, $HyprDir/scripts/switch-workspace 6
 bind = $Super, 7, exec, $HyprDir/scripts/switch-workspace 7
 bind = $Super, 8, exec, $HyprDir/scripts/switch-workspace 8
 bind = $Super, 9, exec, $HyprDir/scripts/switch-workspace 9
+bind = $Super, O, exec, $HyprDir/scripts/switch-workspace 10
 
 bind = $Super_Shift, 1, movetoworkspace, 1
 bind = $Super_Shift, 2, movetoworkspace, 2

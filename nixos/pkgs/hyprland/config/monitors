@@ -1,15 +1,20 @@
-monitor = ,preferred,auto,1.5
+monitor = DP-1,     preferred, auto, 1.5
+monitor = HDMI-A-1, preferred, auto, 1.5, transform, 3
+
+workspace = r[1-9],  monitor:DP-1
+workspace = s[true], monitor:DP-1
+workspace = 10,      monitor:HDMI-A-1
 
 workspace = 1,                on-created-empty: $Code
 workspace = special:term,     on-created-empty: [float; center; size 80% 80%; opacity 0.9] $Terminal
-workspace = special:browser,  on-created-empty: $Browser
 workspace = special:interact, on-created-empty: [float; center; size 80% 80%]              $Interact
 
 bind = $Super,       Return, togglespecialworkspace, term
 bind = $Super_Shift, S,      movetoworkspace,        special:term
-bind = $Super,       O,      togglespecialworkspace, browser
 bind = $Super,       I,      togglespecialworkspace, interact
 
 windowrulev2 = suppressevent maximize, class:.*
 windowrulev2 = nofocus, class:^$, title:^$, xwayland:1, floating:1, fullscreen:0, pinned:0
 windowrulev2 = fullscreen, class:^Bytedance-feishu$, title:^Picture$
+
+monitor = eDP-1, disable
