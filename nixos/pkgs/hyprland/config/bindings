@@ -22,15 +22,16 @@ bind = $Super_Shift, L, movewindow, r
 bind = $Super_Shift, F, togglefloating,
 bind = $Super_Shift, P, pin,
 
-bind = $Super, 1, exec, $HyprDir/scripts/switch-workspace 1
-bind = $Super, 2, exec, $HyprDir/scripts/switch-workspace 2
-bind = $Super, 3, exec, $HyprDir/scripts/switch-workspace 3
-bind = $Super, 4, exec, $HyprDir/scripts/switch-workspace 4
-bind = $Super, 5, exec, $HyprDir/scripts/switch-workspace 5
-bind = $Super, 6, exec, $HyprDir/scripts/switch-workspace 6
-bind = $Super, 7, exec, $HyprDir/scripts/switch-workspace 7
-bind = $Super, 8, exec, $HyprDir/scripts/switch-workspace 8
-bind = $Super, 9, exec, $HyprDir/scripts/switch-workspace 9
+bind = $Super, 1, exec, $Scripts/switch-workspace 1
+bind = $Super, 2, exec, $Scripts/switch-workspace 2
+bind = $Super, 3, exec, $Scripts/switch-workspace 3
+bind = $Super, 4, exec, $Scripts/switch-workspace 4
+bind = $Super, 5, exec, $Scripts/switch-workspace 5
+bind = $Super, 6, exec, $Scripts/switch-workspace 6
+bind = $Super, 7, exec, $Scripts/switch-workspace 7
+bind = $Super, 8, exec, $Scripts/switch-workspace 8
+bind = $Super, 9, exec, $Scripts/switch-workspace 9
+bind = $Super, O, exec, $Scripts/switch-workspace 10
 
 bind = $Super_Shift, 1, movetoworkspace, 1
 bind = $Super_Shift, 2, movetoworkspace, 2
