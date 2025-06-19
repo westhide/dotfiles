@@ -6,8 +6,8 @@ env = XDG_SESSION_TYPE,wayland
 env = XDG_SESSION_DESKTOP,Hyprland
 env = XDG_CURRENT_DESKTOP,Hyprland
 
-$HyprDir     = ~/.config/hypr
 $Super       = ALT
+$Scripts     = ~/.config/hypr/scripts
 $Terminal    = alacritty
 $FileManager = $Terminal -e yazi
 $Menu        = wofi --term $Terminal --show drun
