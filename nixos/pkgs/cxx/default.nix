@@ -9,6 +9,7 @@
     packages = with pkgs; [
       gcc
       gdb
+      lldb
       swig
       bison
       #clang
