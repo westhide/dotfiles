@@ -31,7 +31,6 @@ bind = $Super, 6, exec, $Scripts/switch-workspace 6
 bind = $Super, 7, exec, $Scripts/switch-workspace 7
 bind = $Super, 8, exec, $Scripts/switch-workspace 8
 bind = $Super, 9, exec, $Scripts/switch-workspace 9
-bind = $Super, O, exec, $Scripts/switch-workspace 10
 
 bind = $Super_Shift, 1, movetoworkspace, 1
 bind = $Super_Shift, 2, movetoworkspace, 2
@@ -42,6 +41,12 @@ bind = $Super_Shift, 6, movetoworkspace, 6
 bind = $Super_Shift, 7, movetoworkspace, 7
 bind = $Super_Shift, 8, movetoworkspace, 8
 bind = $Super_Shift, 9, movetoworkspace, 9
+
+bind = $Super,       Return, togglespecialworkspace, term
+bind = $Super_Shift, S,      movetoworkspace,        special:term
+bind = $Super,       I,      togglespecialworkspace, interact
+bind = $Super,       O,      togglespecialworkspace, browser
+# bind = $Super, O, exec, $Scripts/switch-workspace 10
 
 bind =       , PRINT, exec, hyprshot -m output
 bind = $Super, PRINT, exec, hyprshot -m region

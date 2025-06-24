@@ -1,3 +1,2 @@
-exec-once = [workspace 10 silent] $Browser
 exec-once = fcitx5 -d
-exec-once = systemctl --user start hypridle
+# exec-once = systemctl --user start hypridle
