@@ -8,6 +8,7 @@
     userEmail = opts.usermail;
 
     aliases = {
+      cl = "clone";
       co = "checkout";
       br = "branch";
       cm = "commit";
