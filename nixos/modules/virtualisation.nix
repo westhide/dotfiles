@@ -18,6 +18,10 @@
       containersConf = {
         settings = {
           engine.compose_warning_logs = false;
+          containers = {
+            log_driver = "k8s-file";
+            log_size_max = 524288000; # 500M
+          };
         };
       };
       storage.settings = {
