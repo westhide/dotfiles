@@ -17,6 +17,7 @@
       gnumake
       autoconf
       automake
+      clang-tools
     ];
   };
 }
