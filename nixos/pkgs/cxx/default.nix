@@ -3,20 +3,21 @@
 {
   home = {
     sessionVariables = {
-      CC = "gcc";
-      CXX = "g++";
+      CC = "clang";
+      CXX = "clang++";
     };
     packages = with pkgs; [
-      gcc
+      #gcc
       gdb
       lldb
       swig
       bison
-      #clang
+      clang
       cmake
       gnumake
       autoconf
       automake
+      clang-tools
     ];
   };
 }
