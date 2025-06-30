@@ -18,6 +18,7 @@
       inetutils
       fastfetch
       pkg-config
+      brightnessctl
       smartmontools
     ];
   };
