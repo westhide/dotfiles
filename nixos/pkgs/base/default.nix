@@ -17,7 +17,6 @@
       openssl
       inetutils
       fastfetch
-      pkg-config
       smartmontools
     ];
   };

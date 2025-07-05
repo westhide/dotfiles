@@ -9,6 +9,7 @@
     packages = with pkgs; [
       #gcc
       gdb
+      lld
       lldb
       swig
       bison
@@ -17,6 +18,7 @@
       gnumake
       autoconf
       automake
+      pkg-config
       clang-tools
     ];
   };
