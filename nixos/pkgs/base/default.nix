@@ -7,6 +7,7 @@
     };
     packages = with pkgs; [
       jq
+      icu
       zip
       file
       wget
