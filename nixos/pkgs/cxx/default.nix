@@ -15,6 +15,7 @@
       bison
       clang
       cmake
+      ccache
       gnumake
       autoconf
       automake
