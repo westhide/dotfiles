@@ -35,6 +35,8 @@
     rustdesk-server = {
       enable = true;
       openFirewall = true;
+      relay.enable = false;
+      signal.relayHosts = [ "::1" ];
     };
   };
 }
