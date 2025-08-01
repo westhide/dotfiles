@@ -20,15 +20,21 @@
     # withUWSM = true;
   };
 
-  services.displayManager = {
-    sddm = {
+  services = {
+    displayManager = {
+      sddm = {
+        enable = true;
+        autoNumlock = true;
+        wayland.enable = true;
+        theme = "${pkgs.sddm-chili-theme}/share/sddm/themes/chili";
+        extraPackages = with pkgs; [
+          libsForQt5.qt5.qtgraphicaleffects
+        ];
+      };
+    };
+    rustdesk-server = {
       enable = true;
-      autoNumlock = true;
-      wayland.enable = true;
-      theme = "${pkgs.sddm-chili-theme}/share/sddm/themes/chili";
-      extraPackages = with pkgs; [
-        libsForQt5.qt5.qtgraphicaleffects
-      ];
+      openFirewall = true;
     };
   };
 }
