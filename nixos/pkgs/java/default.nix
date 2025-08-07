@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
 {
-
   home.file = {
     ".jdks/openjdk8".source = pkgs.jdk8;
   };
