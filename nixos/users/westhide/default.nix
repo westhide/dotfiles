@@ -1,8 +1,4 @@
-{
-  pkgs,
-  opts,
-  ...
-}:
+{ pkgs, opts, ... }:
 
 {
   imports = [

@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  h,
-  ...
-}:
+{ config, pkgs, h, ... }:
 
 {
   xdg.configFile."hypr/hyprland.conf".enable = false;
