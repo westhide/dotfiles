@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    buildah
     # podman-compose
     docker-compose
   ];
