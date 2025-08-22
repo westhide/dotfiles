@@ -8,7 +8,7 @@
       '';
     };
     packages = with pkgs; [
-      fontforge
+      fontforge-gtk
     ];
   };
 
