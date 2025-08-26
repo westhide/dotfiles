@@ -6,6 +6,10 @@
     lfs.enable = true;
     userName = "Neo";
     userEmail = "unknown@unknown.com";
+    signing = {
+      key = "A39E121B532FA6B2";
+      signByDefault = true;
+    };
 
     aliases = {
       cl = "clone";
