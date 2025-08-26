@@ -6,6 +6,10 @@
     lfs.enable = true;
     userName = "Neo";
     userEmail = "unknown@unknown.com";
+    signing = {
+      key = "~/.ssh/id_ed25519";
+      signByDefault = true;
+    };
 
     aliases = {
       cl = "clone";
@@ -23,6 +27,9 @@
       push.autoSetupRemote = true;
       pull.rebase = true;
       credential.helper = "store";
+      gpg = {
+        format = "ssh";
+      };
     };
 
     includes = [
