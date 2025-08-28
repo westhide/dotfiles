@@ -4,8 +4,8 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    userName = opts.username;
-    userEmail = opts.usermail;
+    userName = "Neo";
+    userEmail = "unknown@unknown.com";
 
     aliases = {
       cl = "clone";
