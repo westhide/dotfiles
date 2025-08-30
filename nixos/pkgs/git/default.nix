@@ -7,7 +7,7 @@
     userName = "Neo";
     userEmail = "unknown@unknown.com";
     signing = {
-      key = "A39E121B532FA6B2";
+      key = "~/.ssh/id_ed25519";
       signByDefault = true;
     };
 
@@ -27,6 +27,9 @@
       push.autoSetupRemote = true;
       pull.rebase = true;
       credential.helper = "store";
+      gpg = {
+        format = "ssh";
+      };
     };
 
     includes = [
