@@ -16,7 +16,7 @@
       nmap
       unzip
       openssl
-      binutils
+      #binutils
       inetutils
       fastfetch
       brightnessctl
