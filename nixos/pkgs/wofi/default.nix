@@ -1,7 +1,7 @@
-{ config, h, ... }:
+{ config, libs, ... }:
 
 {
-  xdg.configFile.wofi.source = h.mkXdgConfigLink config "wofi/config";
+  xdg.configFile.wofi.source = libs.mkXdgConfigLink config "wofi/config";
 
   programs.wofi = {
     enable = true;

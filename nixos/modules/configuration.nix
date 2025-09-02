@@ -1,12 +1,4 @@
-# See also configuration.nix(5) man page, https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-{
-  config,
-  lib,
-  pkgs,
-  opts,
-  ...
-}:
+{ pkgs, opts, ... }:
 
 {
   imports = [
@@ -17,8 +9,8 @@
 
   # Flakes
   nix.settings.experimental-features = [
-    "nix-command"
     "flakes"
+    "nix-command"
   ];
 
   # Boot

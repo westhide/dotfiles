@@ -1,7 +1,7 @@
-{ config, h, ... }:
+{ config, libs, ... }:
 
 {
-  xdg.configFile."alacritty".source = h.mkXdgConfigLink config "alacritty/config";
+  xdg.configFile."alacritty".source = libs.mkXdgConfigLink config "alacritty/config";
 
   programs.alacritty = {
     enable = true;

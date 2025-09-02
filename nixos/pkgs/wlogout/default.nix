@@ -1,7 +1,7 @@
-{ config, h, ... }:
+{ config, libs, ... }:
 
 {
-  xdg.configFile.wlogout.source = h.mkXdgConfigLink config "wlogout/config";
+  xdg.configFile.wlogout.source = libs.mkXdgConfigLink config "wlogout/config";
 
   programs.wlogout = {
     enable = true;

@@ -1,7 +1,7 @@
-{ config, pkgs, h, ... }:
+{ config, pkgs, libs, ... }:
 
 {
-  xdg.configFile.containers.source = h.mkXdgConfigLink config "containers/config";
+  xdg.configFile.containers.source = libs.mkXdgConfigLink config "containers/config";
 
   home.packages = with pkgs; [
     podman-desktop

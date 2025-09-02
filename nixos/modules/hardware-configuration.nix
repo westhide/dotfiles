@@ -1,11 +1,5 @@
 # !!! NEVER CHANGE THIS FILE
-{
-  config,
-  lib,
-  pkgs,
-  modulesPath,
-  ...
-}:
+{ config, lib, modulesPath, ... }:
 
 {
   imports = [

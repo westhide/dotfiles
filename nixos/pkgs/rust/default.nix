@@ -1,7 +1,7 @@
-{ config, pkgs, h, ... }:
+{ config, pkgs, libs, ... }:
 
 {
-  xdg.configFile.sccache.source = h.mkXdgConfigLink config "rust/sccache";
+  xdg.configFile.sccache.source = libs.mkXdgConfigLink config "rust/sccache";
 
   home = {
     sessionPath = [

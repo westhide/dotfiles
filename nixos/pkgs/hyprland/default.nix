@@ -1,8 +1,8 @@
-{ config, pkgs, h, ... }:
+{ config, pkgs, libs, ... }:
 
 {
   xdg.configFile."hypr/hyprland.conf".enable = false;
-  xdg.configFile.hypr.source = h.mkXdgConfigLink config "hyprland/config";
+  xdg.configFile.hypr.source = libs.mkXdgConfigLink config "hyprland/config";
 
   home = {
     sessionVariables = {

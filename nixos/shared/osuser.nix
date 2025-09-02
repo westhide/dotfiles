@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../pkgs
+    ../pkgs
   ];
 
   home.stateVersion = "24.11";
@@ -28,6 +28,7 @@
   };
 
   programs = {
+    home-manager.enable = true;
     bash = {
       enable = true;
       enableCompletion = true;
@@ -35,6 +36,5 @@
         ll = "ls -Alh --color=auto";
       };
     };
-    home-manager.enable = true;
   };
 }

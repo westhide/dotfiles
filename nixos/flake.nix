@@ -25,15 +25,14 @@
   };
 
   outputs = inputs@{
-      self,
       nixpkgs,
       nixos-hardware,
       home-manager,
       ...
   }:
   let
-    opts = import ./options.nix { };
-    h = import ./common/helper.nix { };
+    libs = import ./shared/helper.nix { };
+    opts = import ./shared/option.nix { };
   in
   {
     nixosConfigurations.${opts.hostname} = nixpkgs.lib.nixosSystem {
@@ -45,11 +44,11 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.${opts.username} = import ./users/${opts.username};
-          home-manager.extraSpecialArgs = { inherit inputs h opts; };
+          home-manager.users.${opts.username} = import ./shared/osuser.nix;
+          home-manager.extraSpecialArgs = { inherit inputs libs opts; };
         }
       ];
-      specialArgs = { inherit inputs h opts; };
+      specialArgs = { inherit inputs libs opts; };
     };
   };
 }

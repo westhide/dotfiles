@@ -1,7 +1,7 @@
-{ config, pkgs, h, ... }:
+{ config, pkgs, libs, ... }:
 
 {
-  xdg.configFile.trippy.source = h.mkXdgConfigLink config "trippy/config";
+  xdg.configFile.trippy.source = libs.mkXdgConfigLink config "trippy/config";
 
   home.packages = with pkgs; [
     trippy
