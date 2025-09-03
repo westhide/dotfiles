@@ -16,6 +16,7 @@
       nmap
       unzip
       openssl
+      patchelf
       #binutils
       inetutils
       fastfetch
