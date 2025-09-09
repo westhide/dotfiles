@@ -11,6 +11,7 @@
       zip
       file
       wget
+      bind
       tree
       lsof
       nmap
