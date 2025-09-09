@@ -20,5 +20,6 @@
     bun
     deno
     turbo
+    binaryen
   ];
 }
