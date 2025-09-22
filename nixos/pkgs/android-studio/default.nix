@@ -7,8 +7,10 @@
     };
 
     packages = with pkgs; [
-      android-studio
+      kotlin
+      ktlint
       android-tools
+      android-studio
     ];
   };
 }
