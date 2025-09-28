@@ -20,6 +20,7 @@
     bun
     deno
     turbo
+    maestro
     binaryen
   ];
 }
