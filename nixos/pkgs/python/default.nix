@@ -4,7 +4,7 @@
   xdg.configFile.uv.source = libs.mkXdgConfigLink config "python/uv-config";
 
   home.packages = with pkgs; [
-    python3Full
+    python3Minimal
     uv
   ];
 }

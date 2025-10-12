@@ -35,7 +35,7 @@
         wayland.enable = true;
         theme = "${pkgs.sddm-chili-theme}/share/sddm/themes/chili";
         extraPackages = with pkgs; [
-          libsForQt5.qt5.qtgraphicaleffects
+          qt6.qt5compat
         ];
       };
     };
