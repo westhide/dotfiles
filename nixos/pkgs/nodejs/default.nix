@@ -22,5 +22,6 @@
     turbo
     maestro
     binaryen
+    typescript
   ];
 }
