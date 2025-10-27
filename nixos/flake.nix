@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs-stable = {
-      url = "github:NixOS/nixpkgs/nixos-24.11";
+      url = "github:NixOS/nixpkgs/nixos-25.05";
     };
 
     nixpkgs-unstable = {
@@ -14,10 +14,6 @@
       url = "github:NixOS/nixpkgs/nixos-unstable";
     };
 
-    nixos-hardware = {
-      url = "github:westhide/nixos-hardware/master";
-    };
-
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,10 +21,9 @@
   };
 
   outputs = inputs@{
-      nixpkgs,
-      nixos-hardware,
-      home-manager,
-      ...
+    nixpkgs,
+    home-manager,
+    ...
   }:
   let
     libs = import ./shared/helper.nix { };
@@ -39,7 +34,6 @@
       system = opts.system;
       modules = [
         ./modules
-        nixos-hardware.nixosModules.${opts.hardware}
 
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;

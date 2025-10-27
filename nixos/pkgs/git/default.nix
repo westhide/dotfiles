@@ -4,23 +4,25 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    userName = "Neo";
-    userEmail = "unknown@unknown.com";
     signing = {
+      format = "openpgp";
       key = "~/.ssh/id_ed25519";
       signByDefault = true;
     };
 
-    aliases = {
-      cl = "clone";
-      co = "checkout";
-      br = "branch";
-      cm = "commit";
-      st = "status";
-      rs = "reset";
-    };
-
-    extraConfig = {
+    settings = {
+      user = {
+        name = "Neo";
+        email = "wangyongzhao@avatolabs.com";
+      };
+      alias = {
+        cl = "clone";
+        co = "checkout";
+        br = "branch";
+        cm = "commit";
+        st = "status";
+        rs = "reset";
+      };
       core.autocrlf = "input";
       color.ui = "auto";
       init.defaultBranch = "main";

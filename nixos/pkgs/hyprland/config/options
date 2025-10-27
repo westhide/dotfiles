@@ -12,6 +12,6 @@ $Terminal    = alacritty
 $FileManager = $Terminal -e yazi
 $Menu        = wofi --term $Terminal --show drun
 $Browser     = google-chrome-stable
-$Code        = code
+$Code        = cursor
 $Interact    = bytedance-feishu
 $Lockout     = wlogout --protocol layer-shell
