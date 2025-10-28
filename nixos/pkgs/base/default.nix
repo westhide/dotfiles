@@ -19,6 +19,7 @@
       openssl
       patchelf
       #binutils
+      dmidecode
       inetutils
       fastfetch
       brightnessctl
