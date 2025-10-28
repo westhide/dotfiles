@@ -27,6 +27,11 @@
     ];
   };
 
+  fileSystems."/ext" = {
+    device = "/dev/disk/by-label/NIXMINE";
+    fsType = "ext4";
+  };
+
   networking.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
