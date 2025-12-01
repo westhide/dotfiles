@@ -66,9 +66,9 @@
 
   # Services
   services = {
-    libinput.enable = true;
-    openssh.enable = true;
     envfs.enable = true;
+    openssh.enable = true;
+    libinput.enable = true;
   };
 
   # Graphics
