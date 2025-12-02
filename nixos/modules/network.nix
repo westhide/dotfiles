@@ -3,11 +3,33 @@
 {
   networking = {
     hostName = opts.hostname;
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      wifi = {
+        backend = "iwd";
+        powersave = false;
+      };
+    };
     proxy = {
       default = opts.proxyurl;
       noProxy = "127.0.0.1,localhost";
     };
+    wireless = {
+      enable = false; # Disable wpa_supplicant
+      iwd = {
+        enable = true;
+        settings = {
+          Network = {
+            EnableIPv6 = true;
+          };
+          Settings = {
+            AutoConnect = true;
+          };
+        };
+      };
+    };
+    firewall.allowedTCPPorts = [
+    ];
   };
 
   programs = {
