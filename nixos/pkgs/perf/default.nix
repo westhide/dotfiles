@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    perf
     hotspot
     gnuplot
     valgrind
