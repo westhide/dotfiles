@@ -1,6 +1,7 @@
-monitor = ,         preferred, auto, 1
-monitor = DP-1,     preferred, auto, 1.5
-# monitor = HDMI-A-1, preferred, auto, 1.5, transform, 3
+monitor = , preferred, auto, 1
+
+monitor = DP-2,     preferred, auto-left , 1.5
+monitor = HDMI-A-1, preferred, auto, 1.5, transform, 3
 
 # workspace = r[1-9],  monitor:DP-1
 # workspace = s[true], monitor:DP-1
@@ -16,4 +17,4 @@ windowrulev2 = nofocus, class:^$, title:^$, xwayland:1, floating:1, fullscreen:0
 windowrulev2 = fullscreen, class:^Bytedance-feishu$, title:^Picture$
 windowrulev2 = fullscreen, class:.*desktop-portal-gtk$, title:^All Files$
 
-monitor = eDP-1, disable
+# monitor = eDP-1, disable
