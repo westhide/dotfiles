@@ -9,7 +9,7 @@ monitor = DP-1,     preferred, auto, 1.5
 workspace = 1,                on-created-empty: $Code
 workspace = special:browser,  on-created-empty: $Browser
 workspace = special:term,     on-created-empty: [float; center; size 80% 80%; opacity 0.9] $Terminal
-workspace = special:interact, on-created-empty: [float; center; size 80% 80%]              $Interact
+workspace = special:interact, on-created-empty: [float; center; size monitor_w*0.8 monitor_h*0.8]              $Interact
 
 windowrulev2 = suppressevent maximize, class:.*
 windowrulev2 = nofocus, class:^$, title:^$, xwayland:1, floating:1, fullscreen:0, pinned:0
