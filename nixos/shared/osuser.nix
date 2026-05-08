@@ -1,4 +1,4 @@
-{ pkgs, opts, ... }:
+{ config, pkgs, opts, ... }:
 
 {
   imports = [
@@ -25,6 +25,7 @@
       name = "Adwaita";
       package = pkgs.adwaita-icon-theme;
     };
+    gtk4.theme = config.gtk.theme;
   };
 
   programs = {

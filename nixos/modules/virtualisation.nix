@@ -3,17 +3,10 @@
 {
   environment.systemPackages = with pkgs; [
     buildah
-    # podman-compose
     docker-compose
   ];
 
   virtualisation = {
-    # docker = {
-    #   enable = true;
-    #   daemon.settings = {
-    #     data-root = "/ext/docker";
-    #   };
-    # };
     containers = {
       enable = true;
       containersConf = {

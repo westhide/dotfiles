@@ -44,7 +44,7 @@ bind = $Super_Shift, 9, movetoworkspace, 9
 
 bind = $Super,       Return, togglespecialworkspace, term
 bind = $Super_Shift, S,      movetoworkspace,        special:term
-bind = $Super,       I,      togglespecialworkspace, interact
+# bind = $Super,       I,      togglespecialworkspace, interact
 bind = $Super,       O,      togglespecialworkspace, browser
 # bind = $Super, O, exec, $Scripts/switch-workspace 10
 

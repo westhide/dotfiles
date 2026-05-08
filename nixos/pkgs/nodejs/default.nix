@@ -19,7 +19,6 @@
     nodejs
     bun
     deno
-    turbo
     maestro
     binaryen
     typescript

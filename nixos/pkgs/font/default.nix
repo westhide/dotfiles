@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, ... }:
 
 {
   home = {
@@ -7,9 +7,6 @@
         run [ ! -d ~/.local/share/fonts ] && [ -d ~/dotfiles/fonts ] && ln -s ~/dotfiles/fonts ~/.local/share/fonts
       '';
     };
-    packages = with pkgs; [
-      fontforge-gtk
-    ];
   };
 
   fonts.fontconfig = {

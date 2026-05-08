@@ -1,5 +1,5 @@
 # !!! NEVER CHANGE THIS FILE
-{ config, lib, modulesPath, ... }:
+{ config, lib, pkgs, modulesPath, ... }:
 
 {
   imports = [
@@ -14,6 +14,7 @@
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
@@ -38,6 +39,7 @@
   fileSystems."/ext" = {
     device = "/dev/disk/by-label/NIXMINE";
     fsType = "ext4";
+    #options = [ "ro" "nofail" ];
   };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

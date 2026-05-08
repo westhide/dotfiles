@@ -7,5 +7,7 @@
     enable = true;
     viAlias = true;
     defaultEditor = true;
+    withRuby = false;
+    withPython3 = false;
   };
 }
