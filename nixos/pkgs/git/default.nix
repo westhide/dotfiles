@@ -15,7 +15,7 @@
         name = "h3clabs";
         email = "h3clabs@outlook.com";
       };
-      aliases = {
+      alias = {
         cl = "clone";
         co = "checkout";
         br = "branch";
