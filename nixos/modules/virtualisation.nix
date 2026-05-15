@@ -4,6 +4,10 @@
   environment.systemPackages = with pkgs; [
     buildah
     docker-compose
+
+    distrobox
+    mesa
+    xorg.xhost
   ];
 
   virtualisation = {
