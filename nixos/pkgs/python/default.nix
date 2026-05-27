@@ -5,6 +5,7 @@
 
   home.packages = with pkgs; [
     python3Minimal
+    python3Packages.virtualenv
     uv
   ];
 }

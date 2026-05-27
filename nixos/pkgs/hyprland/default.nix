@@ -32,5 +32,6 @@
       enableXdgAutostart = true;
     };
     settings = { };
+    configType = "hyprlang";
   };
 }

@@ -7,7 +7,7 @@
 
     distrobox
     mesa
-    xorg.xhost
+    xhost
   ];
 
   virtualisation = {
