@@ -3,6 +3,9 @@
 {
   networking = {
     hostName = opts.hostname;
+    hosts = {
+      "23.254.193.48" = [ "h3clabs.homes" ];
+    };
     networkmanager.enable = true;
     proxy = {
       default = opts.proxyurl;
@@ -11,6 +14,9 @@
     firewall = {
       allowedTCPPorts = [
         6443 # k3s
+        1420
+        1421
+        1430
       ];
     };
   };
