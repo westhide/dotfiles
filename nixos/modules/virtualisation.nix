@@ -5,9 +5,6 @@
     buildah
     docker-compose
     k3s
-    distrobox
-    mesa
-    xhost
   ];
 
   environment.sessionVariables = {
