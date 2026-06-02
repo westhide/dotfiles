@@ -8,6 +8,11 @@
       default = opts.proxyurl;
       noProxy = "127.0.0.1,localhost";
     };
+    firewall = {
+      allowedTCPPorts = [
+        6443 # k3s
+      ];
+    };
   };
 
   programs = {

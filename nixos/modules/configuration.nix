@@ -21,6 +21,7 @@
     };
     efi.canTouchEfiVariables = true;
   };
+  boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
 
   # Time
   time.timeZone = "Asia/Shanghai";

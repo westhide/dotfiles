@@ -1,14 +1,24 @@
-{ pkgs, ... }:
+{ pkgs, opts, ... }:
 
 {
   environment.systemPackages = with pkgs; [
     buildah
     docker-compose
-
+    k3s
     distrobox
     mesa
     xhost
   ];
+
+  environment.sessionVariables = {
+    KUBECONFIG = "/home/${opts.username}/.kube/config";
+  };
+
+  services.k3s = {
+    enable = true;
+    role = "server";
+    extraFlags = "";
+  };
 
   virtualisation = {
     containers = {
