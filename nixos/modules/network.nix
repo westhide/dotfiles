@@ -12,6 +12,7 @@
       noProxy = "127.0.0.1,localhost";
     };
     firewall = {
+      trustedInterfaces = [ "tun0" ];
       allowedTCPPorts = [
         6443 # k3s
         1420
