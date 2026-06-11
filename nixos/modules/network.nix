@@ -6,7 +6,14 @@
     hosts = {
       "23.254.193.48" = [ "h3clabs.homes" ];
     };
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      insertNameservers = [
+        "223.6.6.6"
+        "1.1.1.1"
+        "223.5.5.5"
+      ];
+    };
     proxy = {
       default = opts.proxyurl;
       noProxy = "127.0.0.1,localhost";
@@ -49,4 +56,9 @@
       };
     };
   };
+  # systemd.services.v2raya = {
+  #   serviceConfig.Environment = [
+  #     "V2RAYA_LOG_LEVEL=debug"
+  #   ];
+  # };
 }
