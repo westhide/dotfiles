@@ -11,7 +11,6 @@
       insertNameservers = [
         "223.6.6.6"
         "1.1.1.1"
-        "223.5.5.5"
       ];
     };
     proxy = {
@@ -19,12 +18,10 @@
       noProxy = "127.0.0.1,localhost";
     };
     firewall = {
+      enable = false;
       trustedInterfaces = [ "tun0" ];
       allowedTCPPorts = [
         6443 # k3s
-        1420
-        1421
-        1430
       ];
     };
   };

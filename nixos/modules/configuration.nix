@@ -49,6 +49,7 @@
   # Packages
   environment.systemPackages = with pkgs; [
     openssl
+    iptables
   ];
 
   # Programs
