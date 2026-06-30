@@ -1,6 +1,10 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
+  imports = [
+    inputs.silentSDDM.nixosModules.default
+  ];
+
   xdg = {
     terminal-exec = {
       enable = true;
@@ -17,7 +21,6 @@
 
   programs.hyprland = {
     enable = true;
-    # withUWSM = true;
   };
 
   programs.steam = {
@@ -27,6 +30,11 @@
     localNetworkGameTransfers.openFirewall = true;
   };
 
+  programs.silentSDDM = {
+    enable = true;
+    theme = "default";
+  };
+
   services = {
     displayManager = {
       defaultSession = "hyprland";
@@ -34,17 +42,7 @@
         enable = true;
         autoNumlock = true;
         wayland.enable = true;
-        theme = "${pkgs.sddm-chili-theme}/share/sddm/themes/chili";
-        extraPackages = with pkgs; [
-          qt6.qt5compat
-        ];
       };
     };
-    # rustdesk-server = {
-    #   enable = true;
-    #   openFirewall = true;
-    #   relay.enable = false;
-    #   signal.relayHosts = [ "::1" ];
-    # };
   };
 }
