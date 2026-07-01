@@ -4,8 +4,8 @@
   xdg.configFile.uv.source = libs.mkXdgConfigLink config "python/uv-config";
 
   home.packages = with pkgs; [
+    uv
     python3Minimal
     python3Packages.virtualenv
-    uv
   ];
 }

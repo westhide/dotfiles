@@ -5,7 +5,9 @@
     ./hardware-configuration.nix
   ];
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
 
   # Flakes
   nix.settings.experimental-features = [
