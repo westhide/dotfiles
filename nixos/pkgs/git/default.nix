@@ -4,16 +4,11 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    signing = {
-      key = "~/.ssh/h3clabs/id_ed25519";
-      format = "openpgp";
-      signByDefault = true;
-    };
 
     settings = {
       user = {
-        name = "h3clabs";
-        email = "h3clabs@outlook.com";
+        name = "ghost";
+        email = "unknown@unknown.com";
       };
       alias = {
         cl = "clone";
