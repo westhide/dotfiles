@@ -37,6 +37,7 @@
       isNormalUser = true;
       extraGroups = [
         "wheel"
+        "bluetooth"
         "networkmanager"
         "pipewire"
         "podman"
