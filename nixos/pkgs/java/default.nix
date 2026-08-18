@@ -8,9 +8,11 @@
   home.packages = with pkgs; [
     maven
     gradle
+    jetbrains.idea
   ];
 
-  programs.java = {
+  programs.java = with pkgs; {
     enable = true;
+    package = jdk25;
   };
 }
