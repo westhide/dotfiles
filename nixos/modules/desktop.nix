@@ -44,5 +44,8 @@
         wayland.enable = true;
       };
     };
+    flatpak = {
+      enable = true;
+    };
   };
 }
