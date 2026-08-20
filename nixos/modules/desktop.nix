@@ -11,16 +11,16 @@
     };
     portal = {
       enable = true;
-      wlr.enable = true;
       xdgOpenUsePortal = true;
       extraPortals = with pkgs; [
-        xdg-desktop-portal-hyprland
+        xdg-desktop-portal-gtk
       ];
     };
   };
 
   programs.hyprland = {
     enable = true;
+    withUWSM = true;
   };
 
   programs.steam = {
@@ -37,7 +37,7 @@
 
   services = {
     displayManager = {
-      defaultSession = "hyprland";
+      defaultSession = "hyprland-uwsm";
       sddm = {
         enable = true;
         autoNumlock = true;
