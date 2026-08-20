@@ -1,0 +1,72 @@
+hl.config({
+    general = {
+        border_size          = 2,
+        col = {
+            active_border   = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
+            inactive_border = "rgba(595959aa)",
+        },
+        gaps_in              = 4,
+        gaps_out             = 0,
+        layout               = "master",
+        resize_on_border     = true,
+        hover_icon_on_border = true,
+        snap = {
+            enabled = true,
+        },
+    },
+
+    xwayland = {
+        force_zero_scaling = true,
+    },
+
+    dwindle = {
+        preserve_split = true,
+    },
+
+    master = {
+        new_status = "master",
+    },
+
+    decoration = {
+        blur = {
+            enabled = false,
+            size    = 2,
+            xray    = true,
+        },
+        rounding = 2,
+        shadow = {
+            enabled = false,
+            range   = 2,
+        },
+    },
+
+    animations = {
+        enabled = true,
+    },
+
+    input = {
+        kb_layout      = "us",
+        follow_mouse   = 2,
+        natural_scroll = false,
+        touchpad = {
+            natural_scroll = true,
+        },
+    },
+
+    misc = {
+        animate_manual_resizes       = true,
+        animate_mouse_windowdragging = true,
+        close_special_on_empty       = false,
+        disable_autoreload           = true,
+        disable_hyprland_logo        = true,
+        disable_splash_rendering     = true,
+        force_default_wallpaper      = 0,
+        focus_on_activate            = true,
+        initial_workspace_tracking   = 2,
+    },
+
+    ecosystem = {
+        no_update_news  = true,
+        no_donation_nag = true,
+    },
+})

@@ -1,7 +1,7 @@
 { config, pkgs, libs, ... }:
 
 {
-  xdg.configFile."hypr/hyprland.conf".enable = false;
+  xdg.configFile."hypr/hyprland.lua".enable = false;
   xdg.configFile.hypr.source = libs.mkXdgConfigLink config "hyprland/config";
 
   home = {
@@ -33,6 +33,6 @@
     };
     settings = { };
     extraConfig = "";
-    configType = "hyprlang";
+    configType = "lua";
   };
 }
