@@ -18,6 +18,10 @@
     };
   };
 
+  programs.seahorse = {
+    enable = true;
+  };
+
   programs.hyprland = {
     enable = true;
     withUWSM = true;
@@ -44,8 +48,16 @@
         wayland.enable = true;
       };
     };
+    gnome.gnome-keyring = {
+      enable = true;
+    };
     flatpak = {
       enable = true;
     };
+  };
+
+  security.pam.services = {
+    sddm.enableGnomeKeyring = true;
+    hyprland.enableGnomeKeyring = true;
   };
 }

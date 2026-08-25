@@ -53,6 +53,7 @@
   environment.systemPackages = with pkgs; [
     openssl
     iptables
+    libsecret
   ];
 
   # Programs
@@ -71,9 +72,9 @@
 
   # Services
   services = {
-    libinput.enable = true;
-    openssh.enable = true;
     envfs.enable = true;
+    openssh.enable = true;
+    libinput.enable = true;
   };
 
   # Graphics
