@@ -2,8 +2,8 @@
 
 {
   home.packages = with pkgs; [
-    claude-code
     codex
-    mistral-rs
+    grok-build
+    claude-code
   ];
 }
