@@ -4,13 +4,14 @@
   fonts = {
     packages = with pkgs; [
       noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-cjk-serif
       noto-fonts-color-emoji
       nerd-fonts.symbols-only
+      noto-fonts-cjk-sans-static
+      noto-fonts-cjk-serif-static
     ];
 
     fontDir.enable = true;
+    enableDefaultPackages = false;
     enableGhostscriptFonts = true;
     fontconfig = {
       enable = true;
@@ -19,23 +20,33 @@
       useEmbeddedBitmaps = true;
       defaultFonts = {
         serif = [
-          "Noto Serif"
           "Noto Serif CJK SC"
+          "Noto Serif"
           "Noto Color Emoji"
           "Symbols Nerd Font"
         ];
         sansSerif = [
-          "Noto Sans"
           "Noto Sans CJK SC"
+          "Noto Sans"
           "Noto Color Emoji"
           "Symbols Nerd Font"
         ];
         monospace = [
-          "Noto Mono"
           "Noto Sans Mono CJK SC"
+          "Noto Mono"
           "Noto Color Emoji"
           "Symbols Nerd Font Mono"
         ];
+      };
+      aliases = {
+        "system-ui" = {
+          prefer = [
+            "Noto Sans CJK SC"
+            "Noto Sans"
+            "Noto Color Emoji"
+            "Symbols Nerd Font"
+          ];
+        };
       };
     };
   };
