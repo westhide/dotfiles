@@ -11,7 +11,7 @@
     ];
 
     fontDir.enable = true;
-    enableDefaultPackages = false;
+    enableDefaultPackages = true;
     enableGhostscriptFonts = true;
     fontconfig = {
       enable = true;
@@ -22,20 +22,20 @@
         serif = [
           "Noto Serif CJK SC"
           "Noto Serif"
-          "Noto Color Emoji"
           "Symbols Nerd Font"
         ];
         sansSerif = [
           "Noto Sans CJK SC"
           "Noto Sans"
-          "Noto Color Emoji"
           "Symbols Nerd Font"
         ];
         monospace = [
           "Noto Sans Mono CJK SC"
           "Noto Mono"
-          "Noto Color Emoji"
           "Symbols Nerd Font Mono"
+        ];
+        emoji = [
+          "Noto Color Emoji"
         ];
       };
       aliases = {

@@ -12,9 +12,18 @@
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
-      serif = [ "CommitMonoFont" ];
-      sansSerif = [ "CommitMonoFont" ];
-      monospace = [ "CommitMonoFont" ];
+      serif = [
+        "CommitMonoFont"
+        "Noto Serif CJK SC"
+      ];
+      sansSerif = [
+        "CommitMonoFont"
+        "Noto Sans CJK SC"
+      ];
+      monospace = [
+        "CommitMonoFont"
+        "Noto Sans Mono CJK SC"
+      ];
     };
   };
 }
