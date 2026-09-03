@@ -3,18 +3,18 @@
 {
   xdg.configFile.sccache.source = libs.mkXdgConfigLink config "rust/sccache";
 
-  home = {
-    sessionPath = [
-      "$HOME/.cargo/bin"
-    ];
+  home.sessionPath = [
+    "$HOME/.cargo/bin"
+  ];
 
-    packages = with pkgs; [
-      # (rustup.overrideAttrs (_: {
-      #   # use nix-ld, fix dynamic-linker set-interpreter path
-      #   patches = [ ];
-      # }))
-    ];
-  };
+  home.packages = with pkgs; [
+    jetbrains.rust-rover
+    # (rustup.overrideAttrs (_: {
+    #   # use nix-ld, fix dynamic-linker set-interpreter path
+    #   patches = [ ];
+    # }))
+  ];
+
 }
 
 # RUSTUP_DIST_SERVER=https://cloudfront-static.rust-lang.org
