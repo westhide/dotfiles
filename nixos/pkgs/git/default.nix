@@ -1,6 +1,10 @@
-{ opts, ... }:
+{ pkgs, opts, ... }:
 
 {
+  home.packages = with pkgs; [
+    github-cli
+  ];
+
   programs.git = {
     enable = true;
     lfs.enable = true;
