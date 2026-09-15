@@ -1,12 +1,12 @@
 { inputs, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    codex
-    grok-build
-    claude-code
-    inputs.llm-pkgs.packages.${stdenv.hostPlatform.system}.dsh
-    inputs.llm-pkgs.packages.${stdenv.hostPlatform.system}.chatgpt
-    inputs.llm-pkgs.packages.${stdenv.hostPlatform.system}.claude-desktop
+  imports = [ ./cli.nix ];
+
+  home.packages = with inputs.llm-pkgs.packages.${pkgs.stdenv.hostPlatform.system}; [
+    dsh
+    orca
+    chatgpt
+    claude-desktop
   ];
 }
