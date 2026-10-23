@@ -40,10 +40,13 @@
         "wheel"
         "bluetooth"
         "networkmanager"
+        "audio"
+        "video"
         "pipewire"
         "podman"
         "kvm"
         "adbusers"
+        "dialout"
         "wireshark"
       ];
       shell = pkgs.bash;
