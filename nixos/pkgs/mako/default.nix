@@ -5,6 +5,6 @@
   xdg.configFile.mako.source = libs.mkXdgConfigLink config "mako/config";
 
   services.mako = {
-    enable = true;
+    enable = false;
   };
 }

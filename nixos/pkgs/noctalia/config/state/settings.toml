@@ -1,0 +1,184 @@
+config_version = 15
+
+[backdrop]
+enabled = true
+
+[bar.default]
+auto_hide = true
+capsule_group = []
+center = [ "workspaces", "media", "launcher" ]
+end = [
+    "clock",
+    "tray",
+    "notifications",
+    "clipboard",
+    "network",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "settings",
+    "session"
+]
+layer = "overlay"
+reserve_space = false
+show_on_workspace_switch = false
+start = [ "control-center" ]
+
+[dock]
+active_monitor_only = true
+auto_hide = true
+enabled = true
+icon_size = 28
+launcher_position = "start"
+reserve_space = false
+show_dots = true
+
+[location]
+auto_locate = true
+
+[lockscreen]
+transition = [ "fade" ]
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[osd]
+position = "bottom_center"
+position_vertical = "bottom_center"
+
+    [osd.kinds]
+    keyboard_layout = false
+
+[shell]
+niri_overview_type_to_launch_enabled = true
+
+    [shell.launcher]
+    app_grid = true
+    categories = false
+    compact = true
+    layout = "simple"
+    search_position = "top"
+
+    [shell.panel]
+    transparency_mode = "glass"
+    wallpaper_placement = "floating"
+    wallpaper_position = "center"
+
+[theme]
+builtin = "Dracula"
+community_palette = "Oxocarbon"
+pure_black_dark = true
+source = "builtin"
+wallpaper_scheme = "m3-content"
+
+[wallpaper]
+transition = [ "fade" ]
+
+    [wallpaper.default]
+    path = "/home/westhide/Pictures/wallhaven-3zgdd3_1920x1080.png"
+
+    [wallpaper.last]
+    path = "/home/westhide/Pictures/wallhaven-3zgdd3_1920x1080.png"
+
+    [wallpaper.monitors.HDMI-A-1]
+    path = "/home/westhide/Pictures/wallhaven-3zgdd3_1920x1080.png"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Dracula"
+    palette_source = "builtin"
+    path = "/home/westhide/Pictures/wallhaven-3zgdd3_1920x1080.png"
+    theme_mode = "dark"
+
+[widget.battery]
+show_label = false
+
+[widget.bluetooth]
+hide_when_no_connected_device = true
+
+[widget.brightness]
+show_label = false
+
+[widget.clock]
+format = "{:%Y-%M-%d %H:%M}"
+
+[widget.control-center]
+glyph = "home"
+
+[widget.media]
+album_art_only = true
+hide_when_no_media = true
+rotate_album_art = true
+
+[widget.tray]
+drawer = true
+drawer_columns = 5
+
+[widget.volume]
+show_label = false
+
+[widget.workspaces]
+hide_when_empty = true
+show_labels = false
+style = "focus_hint"

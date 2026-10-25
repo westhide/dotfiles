@@ -5,7 +5,7 @@
 
   home.packages = with inputs.llm-pkgs.packages.${pkgs.stdenv.hostPlatform.system}; [
     dsh
-    orca
+    # orca
     chatgpt
     claude-desktop
   ];

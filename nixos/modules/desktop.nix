@@ -13,7 +13,7 @@
       enable = true;
       xdgOpenUsePortal = true;
       extraPortals = with pkgs; [
-        # xdg-desktop-portal-gtk
+        xdg-desktop-portal-gtk
       ];
     };
   };
@@ -25,6 +25,10 @@
   programs.hyprland = {
     enable = true;
     withUWSM = true;
+  };
+
+  programs.niri = {
+    enable = true;
   };
 
   programs.steam = {
@@ -40,8 +44,9 @@
   };
 
   services = {
+    upower.enable = true;
     displayManager = {
-      defaultSession = "hyprland-uwsm";
+      defaultSession = "niri";
       sddm = {
         enable = true;
         autoNumlock = true;

@@ -28,6 +28,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    grub2-themes = {
+      url = "github:vinceliuice/grub2-themes";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     llm-pkgs = {
       url = "github:numtide/llm-agents.nix";
     };
@@ -37,6 +42,7 @@
       nixpkgs,
       nixos-hardware,
       home-manager,
+      grub2-themes,
       ...
   }:
   let

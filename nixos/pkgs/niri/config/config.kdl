@@ -1,0 +1,158 @@
+input {
+    keyboard {
+        xkb { layout "us"; }
+        numlock
+    }
+    touchpad {
+        tap
+        natural-scroll
+    }
+    focus-follows-mouse max-scroll-amount="0%"
+    mod-key "Alt"
+}
+
+output "HDMI-A-1" {
+    position x=0 y=0
+    focus-at-startup
+}
+
+output "eDP-1" {
+    off
+}
+
+layout {
+    gaps 2
+    center-focused-column "never"
+    preset-column-widths {
+        proportion 0.25
+        proportion 0.5
+        proportion 0.75
+        proportion 1.0
+    }
+    default-column-width { proportion 1.0; }
+    focus-ring {
+        width 2
+        active-color "#33ccff"
+        inactive-color "#595959"
+    }
+    border { off; }
+}
+
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 14
+}
+
+prefer-no-csd
+hotkey-overlay { skip-at-startup; }
+
+animations {
+    workspace-switch {
+        off
+    }
+}
+
+spawn-at-startup "noctalia"
+
+workspace "1"
+workspace "2"
+workspace "3"
+workspace "4"
+workspace "5"
+workspace "6"
+workspace "7"
+workspace "8"
+workspace "9"
+workspace "terminal"
+workspace "browser"
+workspace "dingtalk"
+
+window-rule {
+    geometry-corner-radius 4
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id="^niri-terminal$"
+    open-on-workspace "terminal"
+    open-floating true
+    default-column-width { proportion 0.85; }
+    default-window-height { proportion 0.85; }
+}
+
+window-rule {
+    match app-id="^google-chrome$"
+    open-on-workspace "browser"
+    default-column-width { proportion 1.0; }
+}
+
+window-rule {
+    match app-id="^com\\.alibabainc\\.dingtalk$"
+    open-on-workspace "dingtalk"
+    default-column-width { proportion 1.0; }
+}
+
+overview {
+    zoom 0.4
+}
+
+layer-rule {
+    match namespace="^noctalia-backdrop"
+    place-within-backdrop true
+}
+
+binds {
+    Super+Super_L repeat=false { toggle-overview; }
+    Super+Super_R repeat=false { toggle-overview; }
+
+    Mod+T { spawn "alacritty"; }
+    Mod+E { spawn "alacritty" "-e" "yazi"; }
+    Mod+Return { spawn "~/.config/niri/terminal-workspace.sh"; }
+    Mod+O { spawn "~/.config/niri/browser-workspace.sh"; }
+    Mod+I { spawn "~/.config/niri/dingtalk-workspace.sh"; }
+    Mod+M { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
+    Ctrl+Alt+L { spawn "noctalia" "msg" "session" "lock"; }
+    Mod+Shift+Escape { spawn "noctalia" "msg" "panel-toggle" "session"; }
+    Mod+S { spawn "noctalia" "msg" "settings-toggle"; }
+    Mod+W { close-window; }
+
+    Mod+H { focus-column-left; }
+    Mod+J { focus-window-down; }
+    Mod+K { focus-window-up; }
+    Mod+L { focus-column-right; }
+    Mod+Shift+H { move-column-left; }
+    Mod+Shift+J { move-window-down; }
+    Mod+Shift+K { move-window-up; }
+    Mod+Shift+L { move-column-right; }
+
+    Mod+F { maximize-column; }
+    Mod+Shift+F { toggle-window-floating; }
+    Mod+Ctrl+F { fullscreen-window; }
+    Mod+R { switch-preset-column-width; }
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+Shift+1 { move-window-to-workspace 1; }
+    Mod+Shift+2 { move-window-to-workspace 2; }
+    Mod+Shift+3 { move-window-to-workspace 3; }
+    Mod+Shift+4 { move-window-to-workspace 4; }
+    Mod+Shift+5 { move-window-to-workspace 5; }
+    Mod+Shift+6 { move-window-to-workspace 6; }
+    Mod+Shift+7 { move-window-to-workspace 7; }
+    Mod+Shift+8 { move-window-to-workspace 8; }
+    Mod+Shift+9 { move-window-to-workspace 9; }
+
+    Print { screenshot-screen; }
+    Mod+Print { screenshot; }
+    Mod+Shift+Slash { show-hotkey-overlay; }
+    Mod+Shift+Q { quit; }
+}

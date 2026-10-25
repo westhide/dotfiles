@@ -1,8 +1,9 @@
-{ pkgs, opts, ... }:
+{ inputs, pkgs, opts, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
+    inputs.grub2-themes.nixosModules.default
   ];
 
   nixpkgs.config = {
@@ -17,9 +18,18 @@
 
   # Boot
   boot.loader = {
-    systemd-boot = {
+    systemd-boot.enable = false;
+    grub = {
       enable = true;
+      efiSupport = true;
+      device = "nodev";
       configurationLimit = 10;
+    };
+    grub2-theme = {
+      enable = true;
+      theme = "vimix";
+      screen = "1080p";
+      footer = true;
     };
     efi.canTouchEfiVariables = true;
   };
