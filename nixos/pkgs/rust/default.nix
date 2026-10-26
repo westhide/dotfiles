@@ -8,7 +8,7 @@
   ];
 
   home.packages = with pkgs; [
-    jetbrains.rust-rover
+    # jetbrains.rust-rover
     # (rustup.overrideAttrs (_: {
     #   # use nix-ld, fix dynamic-linker set-interpreter path
     #   patches = [ ];

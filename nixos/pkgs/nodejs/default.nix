@@ -17,8 +17,8 @@
 
   home.packages = with pkgs; [
     nodejs
-    bun
-    deno
+    # bun
+    # deno
     maestro
     binaryen
     typescript
