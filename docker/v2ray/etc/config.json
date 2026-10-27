@@ -10,7 +10,7 @@
 			"settings": {
 				"clients": [
 					{
-						"id": "00000000-0000-0000-0000-000000000000",
+						"id": "35738602-d082-4459-9d4c-817c7fd63d2c",
 						"alterId": 0
 					}
 				]
@@ -19,6 +19,130 @@
 				"network": "ws",
 				"wsSettings": {
 					"path": "/phantom/data"
+				}
+			},
+			"mux": {
+				"enabled": true,
+				"concurrency": 4
+			}
+		},
+		{
+			"listen": "0.0.0.0",
+			"port": 5916,
+			"protocol": "vmess",
+			"settings": {
+				"clients": [
+					{
+						"id": "35738602-d082-4459-9d4c-817c7fd63d2c",
+						"alterId": 0
+					}
+				]
+			},
+			"streamSettings": {
+				"network": "tcp",
+				"security": "tls",
+				"tlsSettings": {
+					"certificates": [
+						{
+							"certificateFile": "/etc/v2ray/crt.pem",
+							"keyFile": "/etc/v2ray/key.pem"
+						}
+					]
+				}
+			},
+			"mux": {
+				"enabled": true,
+				"concurrency": 4
+			}
+		},
+		{
+			"listen": "0.0.0.0",
+			"port": 5920,
+			"protocol": "vless",
+			"settings": {
+				"clients": [
+					{
+						"id": "35738602-d082-4459-9d4c-817c7fd63d2c",
+
+						"flow": "xtls-rprx-vision"
+					}
+				],
+				"decryption": "none"
+			},
+			"streamSettings": {
+				"network": "tcp",
+				"security": "tls",
+				"tlsSettings": {
+					"certificates": [
+						{
+							"certificateFile": "/etc/v2ray/crt.pem",
+							"keyFile": "/etc/v2ray/key.pem"
+						}
+					]
+				}
+			},
+			"mux": {
+				"enabled": true,
+				"concurrency": 4
+			}
+		},
+		{
+			"listen": "0.0.0.0",
+			"port": 5924,
+			"protocol": "vless",
+			"settings": {
+				"clients": [
+					{
+						"id": "35738602-d082-4459-9d4c-817c7fd63d2c",
+
+						"flow": "xtls-rprx-vision"
+					}
+				],
+				"decryption": "none"
+			},
+			"streamSettings": {
+				"network": "grpc",
+				"security": "tls",
+				"tlsSettings": {
+					"certificates": [
+						{
+							"certificateFile": "/etc/v2ray/crt.pem",
+							"keyFile": "/etc/v2ray/key.pem"
+						}
+					]
+				},
+				"grpcSettings": { "serviceName": "phantom" }
+			}
+		},
+		{
+			"listen": "0.0.0.0",
+			"port": 5928,
+			"protocol": "vless",
+			"settings": {
+				"clients": [
+					{
+						"id": "35738602-d082-4459-9d4c-817c7fd63d2c",
+						"flow": "xtls-rprx-vision"
+					}
+				],
+				"decryption": "none"
+			},
+			"streamSettings": {
+				"network": "quic",
+				"security": "tls",
+				"tlsSettings": {
+					"certificates": [
+						{
+							"certificateFile": "/etc/v2ray/crt.pem",
+							"keyFile": "/etc/v2ray/key.pem"
+						}
+					]
+				},
+				"quicSettings": {
+					"security": "none",
+					"header": {
+						"type": "wechat-video"
+					}
 				}
 			}
 		},
