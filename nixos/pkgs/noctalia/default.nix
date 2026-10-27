@@ -1,11 +1,12 @@
-{ config, libs, ... }:
+{ config, ext, ... }:
 
 {
-  xdg.configFile."noctalia/config.toml".source =
-    libs.mkXdgConfigLink config "noctalia/config/config.toml";
+  xdg.configFile."noctalia/config.toml".source = ext.mklink "config/config.toml";
 
-  home.file."${config.xdg.stateHome}/noctalia/settings.toml".source =
-    libs.mkXdgConfigLink config "noctalia/config/state/settings.toml";
+  home.file.noctalia-settings = {
+    target = "${config.xdg.stateHome}/noctalia/settings.toml";
+    source = ext.mklink "config/state/settings.toml";
+  };
 
   programs.noctalia = {
     enable = true;

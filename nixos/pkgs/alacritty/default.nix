@@ -1,7 +1,7 @@
-{ config, libs, ... }:
+{ ext, ... }:
 
 {
-  xdg.configFile."alacritty".source = libs.mkXdgConfigLink config "alacritty/config";
+  xdg.configFile."alacritty".source = ext.mklink "config";
 
   programs.alacritty = {
     enable = true;

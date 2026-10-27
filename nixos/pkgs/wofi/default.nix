@@ -1,7 +1,7 @@
-{ config, libs, ... }:
+{ ext, ... }:
 
 {
-  xdg.configFile.wofi.source = libs.mkXdgConfigLink config "wofi/config";
+  xdg.configFile.wofi.source = ext.mklink "config";
 
   programs.wofi = {
     enable = true;

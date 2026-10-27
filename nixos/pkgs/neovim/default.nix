@@ -1,7 +1,7 @@
-{ config, libs, ... }:
+{ ext, ... }:
 
 {
-  xdg.configFile.nvim.source = libs.mkXdgConfigLink config "neovim/config";
+  xdg.configFile.nvim.source = ext.mklink "config";
 
   programs.neovim = {
     enable = true;

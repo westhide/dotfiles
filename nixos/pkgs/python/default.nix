@@ -1,7 +1,7 @@
-{ config, pkgs, libs, ... }:
+{ pkgs, ext, ... }:
 
 {
-  xdg.configFile.uv.source = libs.mkXdgConfigLink config "python/uv-config";
+  xdg.configFile.uv.source = ext.mklink "uv-config";
 
   home.packages = with pkgs; [
     uv

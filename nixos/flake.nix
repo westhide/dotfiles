@@ -46,7 +46,6 @@
       ...
   }:
   let
-    libs = import ./shared/helper.nix { };
     opts = import ./shared/option.nix { };
   in
   {
@@ -60,10 +59,10 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.${opts.username} = import ./shared/osuser.nix;
-          home-manager.extraSpecialArgs = { inherit inputs libs opts; };
+          home-manager.extraSpecialArgs = { inherit inputs opts; };
         }
       ];
-      specialArgs = { inherit inputs libs opts; };
+      specialArgs = { inherit inputs opts; };
     };
   };
 }

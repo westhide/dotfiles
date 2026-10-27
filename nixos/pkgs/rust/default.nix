@@ -1,7 +1,7 @@
-{ config, pkgs, libs, ... }:
+{ pkgs, ext, ... }:
 
 {
-  xdg.configFile.sccache.source = libs.mkXdgConfigLink config "rust/sccache";
+  xdg.configFile.sccache.source = ext.mklink "sccache";
 
   home.sessionPath = [
     "$HOME/.cargo/bin"

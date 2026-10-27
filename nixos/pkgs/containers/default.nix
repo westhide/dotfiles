@@ -1,7 +1,7 @@
-{ config, pkgs, libs, ... }:
+{ pkgs, ext, ... }:
 
 {
-  xdg.configFile.containers.source = libs.mkXdgConfigLink config "containers/config";
+  xdg.configFile.containers.source = ext.mklink "config";
 
   home.packages = with pkgs; [
   ];

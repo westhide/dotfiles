@@ -1,7 +1,7 @@
-{ config, pkgs, libs, ... }:
+{ pkgs, ext, ... }:
 
 {
-  xdg.configFile.niri.source = libs.mkXdgConfigLink config "niri/config";
+  xdg.configFile.niri.source = ext.mklink "config";
 
   home.packages = with pkgs; [
     xwayland-satellite
