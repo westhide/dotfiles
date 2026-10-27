@@ -1,4 +1,5 @@
 input {
+    mod-key "Alt"
     keyboard {
         xkb { layout "us"; }
         numlock
@@ -7,8 +8,8 @@ input {
         tap
         natural-scroll
     }
+    workspace-auto-back-and-forth
     focus-follows-mouse max-scroll-amount="0%"
-    mod-key "Alt"
 }
 
 output "HDMI-A-1" {
@@ -51,8 +52,6 @@ animations {
         off
     }
 }
-
-spawn-at-startup "noctalia"
 
 workspace "1"
 workspace "2"
@@ -101,15 +100,20 @@ layer-rule {
     place-within-backdrop true
 }
 
+spawn-at-startup "noctalia"
+spawn-at-startup "google-chrome-stable"
+spawn-at-startup "alacritty" "--class" "niri-terminal"
+
 binds {
     Super+Super_L repeat=false { toggle-overview; }
     Super+Super_R repeat=false { toggle-overview; }
 
+    Mod+O { focus-workspace "browser"; }
+    Mod+I { focus-workspace "dingtalk"; }
+    Mod+Return { focus-workspace "terminal"; }
+
     Mod+T { spawn "alacritty"; }
     Mod+E { spawn "alacritty" "-e" "yazi"; }
-    Mod+Return { spawn "~/.config/niri/terminal-workspace.sh"; }
-    Mod+O { spawn "~/.config/niri/browser-workspace.sh"; }
-    Mod+I { spawn "~/.config/niri/dingtalk-workspace.sh"; }
     Mod+M { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
     Ctrl+Alt+L { spawn "noctalia" "msg" "session" "lock"; }
     Mod+Shift+Escape { spawn "noctalia" "msg" "panel-toggle" "session"; }
@@ -125,12 +129,9 @@ binds {
     Mod+Shift+K { move-window-up; }
     Mod+Shift+L { move-column-right; }
 
-    Mod+F { maximize-column; }
+    Mod+F { fullscreen-window; }
     Mod+Shift+F { toggle-window-floating; }
-    Mod+Ctrl+F { fullscreen-window; }
     Mod+R { switch-preset-column-width; }
-    Mod+Minus { set-column-width "-10%"; }
-    Mod+Equal { set-column-width "+10%"; }
 
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
@@ -153,6 +154,10 @@ binds {
 
     Print { screenshot-screen; }
     Mod+Print { screenshot; }
+
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Shift+Q { quit; }
 }
