@@ -33,7 +33,10 @@
     };
     efi.canTouchEfiVariables = true;
   };
-  boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
+  boot.kernel.sysctl = {
+    "net.ipv4.ip_forward" = 1;
+    "vm.nr_hugepages" = 128;
+  };
 
   # Time
   time.timeZone = "Asia/Shanghai";
