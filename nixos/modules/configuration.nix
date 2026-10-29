@@ -106,6 +106,11 @@
     options = "--delete-older-than 30d";
   };
 
+  nix.optimise = {
+    automatic = true;
+    dates = [ "monthly" ];
+  };
+
   # !!! NEVER CHANGE THIS LINE
   system.stateVersion = "24.11";
 }
