@@ -74,6 +74,7 @@ window-rule {
 
 window-rule {
     match app-id="^niri-terminal$"
+    opacity 0.9
     open-on-workspace "terminal"
     open-floating true
     default-column-width { proportion 0.85; }
