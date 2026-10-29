@@ -1,7 +1,10 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 
 {
   home = {
+    packages = with pkgs; [
+      fontforge-gtk
+    ];
     activation = {
       link-fonts = lib.hm.dag.entryAfter [ "installPackages" ] ''
         run [ ! -d ~/.local/share/fonts ] && [ -d ~/dotfiles/fonts ] && ln -s ~/dotfiles/fonts ~/.local/share/fonts
