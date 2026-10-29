@@ -17,6 +17,8 @@
     extraFlags = "";
   };
 
+  systemd.services.k3s.enable = false;
+
   virtualisation = {
     containers = {
       enable = true;
