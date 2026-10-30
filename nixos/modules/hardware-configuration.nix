@@ -17,7 +17,10 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
-  boot.tmp.useTmpfs = true;
+  boot.tmp = {
+    useTmpfs = true;
+    tmpfsSize = "10%";
+  };
 
   fileSystems."/" = {
     device = "/dev/disk/by-label/NIXROOT";
