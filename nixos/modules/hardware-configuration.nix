@@ -19,7 +19,8 @@
   boot.extraModulePackages = [ ];
   boot.tmp = {
     useTmpfs = true;
-    tmpfsSize = "10%";
+    tmpfsSize = "25%";
+    cleanOnBoot = true;
   };
 
   fileSystems."/" = {
