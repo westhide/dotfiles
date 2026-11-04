@@ -1,0 +1,5 @@
+xkb_symbols "basic" {
+    include "us"
+    key <TLDE> { [ Escape ] };
+    key <ESC> { [ grave, asciitilde ] };
+};
