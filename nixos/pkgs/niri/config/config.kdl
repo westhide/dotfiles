@@ -1,10 +1,7 @@
 input {
     mod-key "Alt"
     keyboard {
-        xkb {
-            layout "mine"
-            variant "basic"
-        }
+        xkb { layout "us"; }
         numlock
     }
     touchpad {
