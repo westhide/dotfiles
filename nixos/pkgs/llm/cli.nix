@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    codex
+    # codex
     # grok-build
     claude-code
   ];

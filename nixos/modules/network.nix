@@ -34,7 +34,6 @@
       usbmon.enable = true;
     };
     trippy.enable = true;
-    sniffnet.enable = true;
   };
 
   services = {

@@ -4,9 +4,9 @@
   imports = [ ./cli.nix ];
 
   home.packages = with inputs.llm-pkgs.packages.${pkgs.stdenv.hostPlatform.system}; [
-    dsh
+    # dsh
     # orca
     chatgpt
-    claude-desktop
+    # claude-desktop
   ];
 }

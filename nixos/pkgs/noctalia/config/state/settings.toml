@@ -164,7 +164,7 @@ hide_when_no_connected_device = true
 show_label = false
 
 [widget.clock]
-format = "{:%Y-%M-%d %H:%M}"
+format = "{:%Y-%m-%d %H:%M}"
 
 [widget.control-center]
 glyph = "home"
