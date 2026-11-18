@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, ext, ... }:
 
 {
-  xdg.configFile."btop/btop.conf".source = ./config/btop.conf;
+  xdg.configFile."btop/btop.conf".source = ext.mklink "config/btop.conf";
 
   home.packages = with pkgs; [
     btop

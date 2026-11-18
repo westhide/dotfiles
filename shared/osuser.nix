@@ -3,6 +3,7 @@
 {
   imports = [
     ../pkgs
+    ../hardware
   ];
 
   home = {
@@ -11,27 +12,7 @@
     stateVersion = "26.11";
   };
 
-  programs = {
-    home-manager.enable = true;
-    bash = {
-      enable = true;
-      enableCompletion = true;
-      historySize = -1;
-      historyFileSize = -1;
-      historyControl = [
-        "ignoredups"
-      ];
-      shellAliases = {
-        ll = "ls -Alh --color=auto";
-      };
-    };
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-      viAlias = true;
-      vimAlias = true;
-    };
-  };
+  programs.home-manager.enable = true;
 
   targets.genericLinux.enable = true;
 }
