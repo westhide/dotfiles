@@ -2,7 +2,7 @@
 
 let
   dir = ./.;
-  pkgsDir = "${config.home.homeDirectory}/rock5bplus-nix/pkgs";
+  pkgsDir = "${config.xdg.configHome}/home-manager/pkgs";
 in
 {
   imports = lib.flatten (
