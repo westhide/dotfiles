@@ -11,7 +11,7 @@
 
   home.packages = with pkgs; [
     niri
-    bibata-cursors
+    dbus
     xwayland-satellite
   ];
 
