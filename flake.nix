@@ -35,6 +35,7 @@
     homeConfigurations.${opts.username} = home-manager.lib.homeManagerConfiguration {
       pkgs = import nixpkgs {
         system = opts.system;
+        config.allowUnfree = true;
       };
       modules = [ ./shared/osuser.nix ];
       extraSpecialArgs = { inherit inputs opts; };
